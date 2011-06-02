@@ -1,0 +1,112 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>EMPTY</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jQuery/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="jQuery/jQBoxModel.js"></script>
+<script type="text/javascript" src="tests/tests.js"></script>
+<script>
+	$(function(){
+	
+	$('body').jQBoxModel({height:true});
+	
+	/*
+		var container = $('.layout-helper');
+		var containerCount = container.length;
+		var divs = $('.layout-helper > div');
+		var divsCount = divs.length;
+
+		container.append('<p class="Clear"></p>');
+		$('.Clear').css({ clear: "both", width:"1px", height: 0, overflow: "hidden", margin:"0" });
+		
+		
+		
+		$('.layout-helper > div').css({float:"left",margin:0,padding:0,border:0});
+		
+		for (i=0;i<containerCount;i++) {
+				var childDivs = $('.layout-helper').eq(i).children();
+				var childDivsCount = childDivs.length;
+			for (j=0;j<childDivsCount ;j++) {
+				
+				
+				var declaredDiv = childDivs.eq(j).attr('class');
+				
+				
+				var declaredNumber = declaredDiv.search(/^w\d+$/);
+				if (declaredNumber == 0) {
+					var declaredWidth = declaredDiv.match(/\d+/);
+				}
+				
+				var siblingsCount = $('.layout-helper').eq(i).children('.w'+declaredWidth).siblings('div').length;
+				var remainingWidth = (100 - declaredWidth) / siblingsCount;
+				
+				$('.layout-helper').eq(i).children('.w'+declaredWidth).css({width:declaredWidth+"%"}).siblings().css({width:remainingWidth+"%"});
+			}
+		}
+		
+		setHeights = function(index){
+			for (i=0;i<containerCount;i++) {
+				var height = container.eq(i).height();
+				container.eq(i).children("div").css({height:height+"px"});
+			}
+		};
+		
+			setHeights();
+		*/
+		
+	});
+</script>
+<!--script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script-->
+</head>
+<body>
+I CAN HAZ TDD?
+<div id="container" class="layout-helper">
+	<div>
+		Declared Box
+		<h3>Declared Box</h3>
+		<div>Subtitle</div>
+		<ul>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+			<li>Four</li>
+		</ul>
+	</div>
+	<div id="x40" class="w50">
+		Extra Box1
+	</div>
+	<div>
+		Extra Box2
+	</div>
+</div>
+<div class="layout-helper">
+	<div id="x40" class="w50">
+		<h1>Declared Box</h1>
+	</div>
+	<div>
+		Extra Box1
+	</div>
+	<div>
+		Extra Box2
+	</div>
+	<div>
+		Extra Box3
+	</div>
+	<div>
+		Extra Box4
+	</div>
+</div>
+<div class="layout-helper">
+	<div id="x10" class="w70">
+		<div>Declared Box</div>
+	</div>
+	<div id="x20">
+		<div>Extra Box1</div>
+	</div>
+</div>
+</body>
+</html>
